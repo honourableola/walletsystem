@@ -7,7 +7,7 @@ namespace Application.Abstractions.Repositories
         Task<User> Create(User user);
         Task<IEnumerable<User>> GetAll();
         Task<User> GetById(Guid id);
-        Task<User> GetByEmail(Guid id);
-        Task<User> DeActivate();
+        Task<User> GetByEmail(string Email);
+        Task<User> DeActivate(Guid UserId);
     }
 }
