@@ -39,7 +39,7 @@ namespace Infrastructure.Repositories
         public async Task<WalletTransaction> GetUserWalletTransactions(Guid userId, string walletAddress)
         {
             var userWallet = await _context.WalletTransactions.Include(a => a.Wallet)
-                .FirstOrDefaultAsync(s => s.UserId == userId);
+                .FirstOrDefaultAsync(s => s.UserId == userId && s.WalletAddress == walletAddress);
             return await userWallet;
         }
     }
