@@ -2,7 +2,7 @@
 
 namespace Application.Abstractions.Repositories
 {
-    public interface ITransactionRepository
+    public interface IWalletTransactionRepository
     {
         Task<WalletTransaction> Add(WalletTransaction transaction);
         Task<WalletTransaction> Get(Guid id);
