@@ -9,7 +9,7 @@ namespace Infrastructure.Persistence.Context
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         { }
 
-        public DbSet<User> Users => Set<User>();
+        public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles => Set<Role>();
         public DbSet<Wallet> Wallets => Set<Wallet>();
         public DbSet<WalletTransaction> WalletTransactions => Set<WalletTransaction>();

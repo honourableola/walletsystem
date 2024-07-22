@@ -9,7 +9,7 @@ namespace Infrastructure.Persistence.EntityTypeConfiguration
         public void Configure(EntityTypeBuilder<Wallet> entity)
         {
             entity.HasKey(e => e.Id);
-            entity.Property(e => e.WalletAddress).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.WalletAddress).IsRequired().HasMaxLength(200);
             entity.Property(e => e.Balance).IsRequired();
             entity.Property(e => e.Currency).IsRequired();
             entity.Property(e => e.CreatedAt).IsRequired();

@@ -9,10 +9,12 @@ namespace Domain.Enums
     public enum AuditAction
     {
         None = 0,
+        Registered,
         UserLoggedIn,
         Transfer,
         Withdrawal,
-        Deposit,
+        DepositInitialized,
+        DepositVerified,
         UserDeactivated,
         UserActivated
     }
